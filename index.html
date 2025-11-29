@@ -116,7 +116,7 @@
         /* ---------------------------------- */
         .hero {
             background-color: var(--hero-bg-color); 
-            height: 75vh; 
+            min-height: 75vh; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -128,6 +128,14 @@
             padding: 20px 10px; 
         }
         
+        /* Style for the "Welcome to KAMCO INVEST" text inside the hero */
+        .hero-welcome-text { 
+            font-size: 1.5em; 
+            margin-bottom: 20px; 
+            font-weight: 600;
+            color: #dcdcdc; 
+        }
+
         .hero-content h1 { 
             font-size: 3rem; 
             margin-bottom: 1rem; 
@@ -240,13 +248,13 @@
 
     <section class="hero">
         <div class="hero-content">
-            <p style="font-size: 1.5em; margin-bottom: 5px; font-weight: 600;">Welcome to KAMCO INVEST</p> 
+            <p class="hero-welcome-text">Welcome to KAMCO INVEST</p> 
             <h1>Automated Trading and Digital Asset Mining</h1>
             
             <p>We manage client accounts using our **remotely controlled program** for investments in **Bitcoin mining, Forex, and Binary Options trading**. Our regulated analysts and automated systems aim for significant returns, and we assure a **99% confidence level** in our platform's performance.</p>
             
             <div class="cta-container">
-                <a href="#" class="cta-button">Start Investing</a>
+                <a href="https://form.jotform.com/253295670648064" class="cta-button">Start Investing</a>
                 
                 <span class="cta-subtext">We take **10% of your earned profit** once withdrawal is ready.</span>
             </div>
@@ -282,3 +290,4 @@
 
 </body>
 </html>
+ 
