@@ -1,293 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAMCO Invest - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>كامكو للاستثمار - الرئيسية</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        /* ---------------------------------- */
-        /* 1. Integrated Global & Theme Variables */
-        /* ---------------------------------- */
         :root {
-            --primary-text: #001F4D; /* Dark Blue for brand text */
-            --accent-green: #27AE60; 
+            --primary-text: #001F4D;
+            --accent-green: #27AE60;
             --accent-orange: #FF6B35;
-            --bg-light: #F8F9FA; 
-            --bg-dark: #001F4D; 
-            --hero-bg-color: #333333; /* Dark gray for hero background, matching screenshot */
-            --font-family: 'Nunito', sans-serif;
+            --bg-light: #F8F9FA;
+            --bg-dark: #001F4D;
+            --hero-bg-color: #333333;
+            --font-family: 'Cairo', sans-serif;
         }
 
-        /* Basic Reset and Typography */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: var(--font-family);
-            line-height: 1.6;
+            line-height: 1.8;
             color: var(--primary-text);
             background: var(--bg-light);
         }
+
         h1, h2, h3 { font-weight: 700; }
 
-        /* ---------------------------------- */
-        /* 2. FIXED TOP HEADER */
-        /* ---------------------------------- */
         header {
-            position: fixed; 
+            position: fixed;
             top: 0;
             width: 100%;
-            background: #222; 
-            height: 30px; 
-            z-index: 1001; 
+            background: #222;
+            height: 30px;
+            z-index: 1001;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: center;
-            padding-right: 15px; 
+            padding-left: 15px;
         }
 
         .alert-icon {
-            color: #ffcc00; 
+            color: #ffcc00;
             font-size: 20px;
         }
-        
-        /* ---------------------------------- */
-        /* 3. Main Branding Area */
-        /* ---------------------------------- */
+
         .main-branding-area {
-            background: #FFFFFF; 
-            margin-top: 30px; 
-            padding: 40px 2rem; 
+            background: #FFFFFF;
+            margin-top: 30px;
+            padding: 40px 2rem;
             text-align: center;
-            display: flex;
-            flex-direction: column; 
-            align-items: center;
-            justify-content: center;
         }
-        
+
         .branding-logo {
-            margin-bottom: 20px; 
-            background: white; 
+            margin-bottom: 20px;
+            background: white;
             padding: 10px 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             border-radius: 8px;
+            display: inline-block;
         }
 
         .branding-logo img {
             height: 70px;
-            width: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        
-        .branding-text-block {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            font-weight: 700;
         }
 
-        .branding-text-block .kamco-en {
-            font-size: 2.5em; 
-            color: var(--primary-text);
-            line-height: 1.1;
-        }
-        
-        .branding-text-block .invest-ar-line {
-            display: flex; 
-            justify-content: center;
-            align-items: baseline;
-            gap: 10px;
-            font-size: 1.8em; 
-            font-weight: 600;
-            color: var(--primary-text);
-            line-height: 1.1;
+        .kamco-en {
+            font-size: 2.5em;
+            font-weight: 800;
         }
 
-        .branding-text-block .arabic-line {
-            font-size: 1.8em; 
+        .arabic-line {
+            font-size: 1.8em;
             font-weight: 600;
-            color: var(--primary-text);
-            line-height: 1.1;
             margin-top: 5px;
         }
 
-        /* ---------------------------------- */
-        /* 4. Hero Section (Increased Space) */
-        /* ---------------------------------- */
         .hero {
-            background-color: var(--hero-bg-color); 
-            min-height: 75vh; 
+            background-color: var(--hero-bg-color);
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white; 
+            color: white;
         }
-        
+
         .hero-content {
-            padding: 20px 10px; 
-        }
-        
-        /* Style for the "Welcome to KAMCO INVEST" text inside the hero */
-        .hero-welcome-text { 
-            font-size: 1.5em; 
-            margin-bottom: 20px; 
-            font-weight: 600;
-            color: #dcdcdc; 
+            padding: 20px;
+            max-width: 700px;
         }
 
-        .hero-content h1 { 
-            font-size: 3rem; 
-            margin-bottom: 1rem; 
-            font-weight: 800; 
+        .hero-welcome-text {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #dcdcdc;
         }
 
-        .hero-content p { 
-            font-size: 1.1em; 
-            margin-bottom: 3rem; 
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #dcdcdc; 
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
         }
-        
-        /* CTA Container for button and subtle text */
-        .cta-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+
+        .hero-content p {
+            font-size: 1.05em;
+            margin-bottom: 2.5rem;
+            color: #dcdcdc;
         }
-        
-        /* Call to Action Button */
+
         .cta-button {
-            background: var(--accent-orange); 
-            color: white; 
-            padding: 1rem 3rem; 
-            border-radius: 50px; 
-            font-size: 1.1rem; 
-            font-weight: 600; 
-            text-decoration: none; 
+            background: var(--accent-orange);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            text-decoration: none;
             display: inline-block;
-            transition: background 0.3s;
         }
-        .cta-button:hover { background: #E55A2B; }
-        
-        /* Subtle text style */
+
         .cta-subtext {
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 0.9em;
-            font-weight: 400;
-            color: #dcdcdc; 
+            color: #dcdcdc;
         }
-        
-        /* ---------------------------------- */
-        /* 5. Main Content and Footer */
-        /* ---------------------------------- */
+
         main {
-            padding: 5rem 0; 
+            padding: 5rem 0;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 3rem;
         }
 
         .content-section {
-            padding: 0 2rem 5rem; 
-            display: flex;
-            gap: 2rem; 
-            justify-content: center;
-            flex-wrap: wrap; 
-        }
-        
-        .section-title { 
-            text-align: center; 
-            font-size: 2.5rem; 
-            margin-bottom: 3rem; 
-            color: var(--primary-text); 
             padding: 0 2rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .feature-card {
-            flex: 1 1 300px; 
-            background: white; 
-            padding: 2rem; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-            text-align: center; 
-            transition: transform translatey(-5px) 0.3s;
-            border-top: 5px solid var(--accent-green); 
+            flex: 1 1 300px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 5px solid var(--accent-green);
         }
-        
+
         footer {
-            background: var(--bg-dark); 
+            background: var(--bg-dark);
             color: white;
             text-align: center;
             padding: 3rem 2rem;
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <span class="alert-icon">!</span>
-    </header>
-    
-    <section class="main-branding-area">
-        
-        <div class="branding-logo">
-            <img src="kamco-logo.jpg" alt="KAMCO Invest Logo">
+<header>
+    <span class="alert-icon">!</span>
+</header>
+
+<section class="main-branding-area">
+    <div class="branding-logo">
+        <img src="kamco-logo.jpg" alt="KAMCO Invest Logo">
+    </div>
+
+    <div class="branding-text-block">
+        <div class="kamco-en">KAMCO</div>
+        <div class="arabic-line">شركة كامكو للاستثمار</div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-welcome-text">مرحباً بكم في كامكو للاستثمار</p>
+
+        <h1>التداول الآلي وتعدين الأصول الرقمية</h1>
+
+        <p>
+            نقوم بإدارة حسابات المستثمرين باستخدام أنظمة تداول آلية يتم التحكم بها عن بُعد،
+            للاستثمار في تعدين البيتكوين، الفوركس، وتداول الخيارات الثنائية.
+            يعمل فريقنا من المحللين المعتمدين والأنظمة الذكية على تحقيق عوائد قوية
+            مع مستوى ثقة يصل إلى 99%.
+        </p>
+
+        <a href="https://form.jotform.com/253295670648064" class="cta-button">
+            ابدأ الاستثمار الآن
+        </a>
+
+        <div class="cta-subtext">
+            يتم خصم 10٪ فقط من الأرباح عند طلب السحب
         </div>
-        
-        <div class="branding-text-block">
-            <span class="kamco-en">KAMCO</span>
-            <div class="invest-ar-line">
-                <span>INVEST</span> 
-                <span dir="rtl">شركة</span>
-            </div>
-            <span class="arabic-line" dir="rtl">كامكو للاستثمار</span>
+    </div>
+</section>
+
+<main>
+    <h2 class="section-title">استراتيجية الاستثمار وهيكل الرسوم</h2>
+
+    <section class="content-section">
+        <div class="feature-card">
+            <h3>تعدين البيتكوين والأصول الرقمية</h3>
+            <p>
+                نقوم بتعدين البيتكوين وإدارة محافظ استثمارية متنوعة من العملات
+                والأصول الرقمية لتحقيق أفضل العوائد.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>تداول الفوركس والخيارات الثنائية</h3>
+            <p>
+                يتم إدارة حسابات المستثمرين عبر أنظمة تداول آلية وتحليل احترافي
+                في أسواق الفوركس والخيارات عالية التردد.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>هيكل رسوم شفاف</h3>
+            <p>
+                لا نربح إلا عند ربحك — يتم خصم 10٪ فقط من الأرباح،
+                ويتم تنفيذ طلبات السحب فوراً.
+            </p>
         </div>
     </section>
+</main>
 
-    <section class="hero">
-        <div class="hero-content">
-            <p class="hero-welcome-text">Welcome to KAMCO INVEST</p> 
-            <h1>Automated Trading and Digital Asset Mining</h1>
-            
-            <p>We manage client accounts using our **remotely controlled program** for investments in **Bitcoin mining, Forex, and Binary Options trading**. Our regulated analysts and automated systems aim for significant returns, and we assure a **99% confidence level** in our platform's performance.</p>
-            
-            <div class="cta-container">
-                <a href="https://form.jotform.com/253295670648064" class="cta-button">Start Investing</a>
-                
-                <span class="cta-subtext">We take **10% of your earned profit** once withdrawal is ready.</span>
-            </div>
-        </div>
-    </section>
-
-    <main>
-        <h2 class="section-title">Investment Strategy & Fee Structure</h2>
-        
-        <section class="content-section">
-            <div class="feature-card">
-                <div class="card-icon" style="color: var(--accent-green);">₿</div>
-                <h3>Bitcoin Mining & Digital Assets</h3>
-                <p>We actively mine Bitcoin alongside managing funds invested in a portfolio of digital currencies and assets.</p>
-            </div>
-            <div class="feature-card">
-                <div class="card-icon" style="color: var(--accent-green);">📊</div>
-                <h3>Binary Options & Forex Trading</h3>
-                <p>Investor accounts are managed through automated trading programs and expert analysis, specializing in high-frequency options and Forex markets.</p>
-            </div>
-            <div class="feature-card">
-                <div class="card-icon" style="color: var(--accent-green);">💰</div>
-                <h3>Transparent Fee Structure</h3>
-                <p>We only earn when you do: We take a **10% fee** from the profits you earn on the platform. Your withdrawal is processed immediately upon request.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 KAMCO Invest. All Rights Reserved.</p>
-        <p style="margin-top:10px; font-size:0.8rem;">KAMCO INVEST شركة كامكو للاستثمار</p>
-    </footer>
+<footer>
+    <p>© 2025 كامكو للاستثمار — جميع الحقوق محفوظة</p>
+    <p style="margin-top:10px; font-size:0.85rem;">KAMCO INVEST | شركة كامكو للاستثمار</p>
+</footer>
 
 </body>
 </html>
- 
